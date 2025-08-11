@@ -17,14 +17,38 @@ const app = express();
 const allowedOrigins = [
   'http://localhost:5173', // для разработки
   'https://localhost:5173',
+  'https://www.anteyko.com', // ваш основной домен
+  'https://anteyko.com', // без www
   'https://labs-liard.vercel.app', // ваш Vercel домен
   process.env.FRONTEND_URL // для продакшена
 ].filter(Boolean);
 
 app.use(cors({ 
-  origin: true, // временно разрешаем все домены для тестирования
-  credentials: true
+  origin: function (origin, callback) {
+    // Разрешаем запросы без origin (например, Postman)
+    if (!origin) return callback(null, true);
+    
+    // Разрешаем запросы с разрешенных доменов
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      return callback(null, true);
+    }
+    
+    // Разрешаем все домены для разработки
+    if (process.env.NODE_ENV === 'development') {
+      return callback(null, true);
+    }
+    
+    // В продакшене разрешаем только указанные домены
+    return callback(null, true); // временно разрешаем все
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+// Обработка preflight запросов
+app.options('*', cors());
+
 app.use(bodyParser.json());
 
 // Create transporter
