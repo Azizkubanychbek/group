@@ -5,7 +5,7 @@
 ## Структура проекта
 
 - `src/` - Frontend React приложение
-- `server.js` - Backend Express сервер
+- `backend/` - Backend Express сервер
 - `env.example` - Пример конфигурации окружения
 
 ## Установка и запуск

@@ -24,6 +24,7 @@ import {
   CheckCircle2,
   XCircle
 } from 'lucide-react';
+import { BACKEND_URL } from './config';
 
 type Language = 'ru' | 'en' | 'zh';
 
@@ -338,7 +339,7 @@ const ContactForm = ({ t }: { t: any }) => {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('http://localhost:3001/api/contact', {
+      const response = await fetch(`${BACKEND_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
