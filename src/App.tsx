@@ -549,7 +549,6 @@ function App() {
       title: t.business.areas.textile.title,
       description: t.business.areas.textile.description,
       status: t.business.active,
-      image: "https://images.pexels.com/photos/3786126/pexels-photo-3786126.jpeg?auto=compress&cs=tinysrgb&w=800",
       image: "https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=800",
       achievements: t.business.areas.textile.achievements
     }
