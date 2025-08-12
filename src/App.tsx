@@ -96,9 +96,9 @@ const translations = {
           achievements: ['1000+ туристов', 'Эко-туры', 'Культурные программы']
         },
         restaurant: {
-          title: 'Ресторанный бизнес',
-          description: 'Сеть ресторанов и суши-баров премиум класса',
-          achievements: ['8 заведений', 'Авторская кухня', 'Кейтеринг']
+          title: 'Онлайн суши-бар',
+          description: 'Высочайшего класса, самый премиальный, авторская кухня, система лояльности',
+          achievements: ['8 заведений', 'Авторская кухня', 'Система лояльности']
         },
         textile: {
           title: 'Производство мёда',
@@ -190,9 +190,9 @@ const translations = {
           achievements: ['1000+ tourists', 'Eco-tours', 'Cultural programs']
         },
         restaurant: {
-          title: 'Restaurant Business',
-          description: 'Network of premium restaurants and sushi bars',
-          achievements: ['8 establishments', 'Signature cuisine', 'Catering']
+          title: 'Online Sushi Bar',
+          description: 'Highest class, most premium, signature cuisine, loyalty system',
+          achievements: ['8 establishments', 'Signature cuisine', 'Loyalty system']
         },
         textile: {
           title: 'Honey Production',
@@ -284,9 +284,9 @@ const translations = {
           achievements: ['1000+游客', '生态旅游', '文化项目']
         },
         restaurant: {
-          title: '餐饮业务',
-          description: '高端餐厅和寿司吧网络',
-          achievements: ['8家门店', '招牌菜', '餐饮服务']
+          title: '在线寿司吧',
+          description: '最高级别，最优质，招牌菜，会员制度',
+          achievements: ['8家门店', '招牌菜', '会员制度']
         },
         textile: {
           title: '蜂蜜生产',
@@ -792,7 +792,7 @@ function App() {
                         {area.status}
                       </span>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-lg" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-lg" />
                   </div>
                   
                   <div className="p-6">
