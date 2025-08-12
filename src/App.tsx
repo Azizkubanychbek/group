@@ -777,9 +777,6 @@ function App() {
                   onMouseEnter={() => setHoveredCard(index + 100)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
-                  {/* Затемнение на всю карточку */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg z-10 pointer-events-none" />
-                  
                   <div className="relative h-48">
                     <img 
                       src={area.image} 
@@ -795,9 +792,11 @@ function App() {
                         {area.status}
                       </span>
                     </div>
+                    {/* Затемнение только на картинке */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-lg" />
                   </div>
                   
-                  <div className="p-6 relative z-20">
+                  <div className="p-6">
                     <div className="flex items-center mb-4">
                       <Icon className="h-8 w-8 text-blue-900 mr-3 transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />
                       <h3 className="text-xl font-bold text-gray-900">{area.title}</h3>
