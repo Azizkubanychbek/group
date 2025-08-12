@@ -556,7 +556,7 @@ function App() {
 
   const stats = [
     { number: "6", label: t.stats.directions, icon: Briefcase },
-    { number: "100+", label: t.stats.employees, icon: Users },
+    { number: "30+", label: t.stats.employees, icon: Users },
     { number: "5", label: t.stats.years, icon: Award },
     { number: "1000+", label: t.stats.clients, icon: Target }
   ];
@@ -773,7 +773,7 @@ function App() {
               return (
                 <div 
                   key={index} 
-                  className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group cursor-pointer"
+                  className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group cursor-pointer relative"
                   onMouseEnter={() => setHoveredCard(index + 100)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
@@ -783,7 +783,7 @@ function App() {
                       alt={area.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute top-4 right-4">
+                    <div className="absolute top-4 right-4 z-10">
                       <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                         area.status === t.business.active
                           ? 'bg-green-100 text-green-800' 
@@ -792,7 +792,7 @@ function App() {
                         {area.status}
                       </span>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-lg" />
                   </div>
                   
                   <div className="p-6">
@@ -857,8 +857,8 @@ function App() {
               </h2>
               <div className="space-y-6">
                 {[
-                  { icon: Mail, title: t.contact.email, info: "info@anteykogroup.kg" },
-                  { icon: Globe, title: t.contact.address, info: "г. Бишкек, ул. Чуй 123, Кыргызстан" }
+                  { icon: Mail, title: t.contact.email, info: "info-group@anteyko.com" },
+                  { icon: Globe, title: t.contact.address, info: "г. Бишкек, ул. Горького 1/2, Кыргызстан" }
                 ].map((contact, index) => {
                   const Icon = contact.icon;
                   return (
@@ -896,7 +896,7 @@ function App() {
             </div>
             
             <div className="text-gray-400 text-sm">
-              © 2025 Anteyko Group. Все права защищены.
+              © 2020 Anteyko Group. Все права защищены.
             </div>
           </div>
         </div>
