@@ -777,7 +777,7 @@ function App() {
                   onMouseEnter={() => setHoveredCard(index + 100)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
-                  <div className="relative h-48">
+                  <div className="relative h-48 overflow-hidden">
                     <img 
                       src={area.image} 
                       alt={area.title}
@@ -792,8 +792,8 @@ function App() {
                         {area.status}
                       </span>
                     </div>
-                    {/* Затемнение только на картинке */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    {/* Затемнение привязано к картинке */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ transform: 'translateZ(0)' }} />
                   </div>
                   
                   <div className="p-6">
