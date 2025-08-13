@@ -583,11 +583,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/logo.png" 
-                alt="Anteyko Logo" 
-                className="h-8 w-8 transition-transform duration-300 hover:scale-110"
-              />
+              <Building2 className="h-8 w-8 text-blue-900 transition-transform duration-300 hover:scale-110" />
               <div>
                 <span className="text-2xl font-bold text-gray-900">ANTEYKO</span>
                 <span className="text-sm text-gray-600 ml-2">GROUP</span>
@@ -915,11 +911,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <img 
-                src="/logo.png" 
-                alt="Anteyko Logo" 
-                className="h-8 w-8 transition-transform duration-300 hover:scale-110"
-              />
+              <Building2 className="h-8 w-8 text-blue-400 transition-transform duration-300 hover:scale-110" />
               <div>
                 <span className="text-2xl font-bold">ANTEYKO GROUP</span>
               </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Hexagon, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -8,10 +8,11 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="relative">
-                <Hexagon className="w-8 h-8 text-amber-400 fill-current" />
-                <Code className="w-4 h-4 text-white absolute inset-0 m-auto" />
-              </div>
+              <img 
+                src="/logo.png" 
+                alt="Anteyko Logo" 
+                className="w-8 h-8"
+              />
               <span className="text-xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
                 Anteyko
               </span>
