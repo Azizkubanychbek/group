@@ -25,6 +25,7 @@ import {
   XCircle
 } from 'lucide-react';
 import { BACKEND_URL } from './config';
+import HoneyPage from './HoneyPage';
 
 type Language = 'ru' | 'en' | 'zh';
 
@@ -469,8 +470,17 @@ function App() {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const [activeSection, setActiveSection] = useState('');
   const [currentLanguage, setCurrentLanguage] = useState<Language>('ru');
+  const [currentPage, setCurrentPage] = useState<'main' | 'honey'>('main');
 
   const t = translations[currentLanguage];
+
+  const handleHoneyClick = () => {
+    setCurrentPage('honey');
+  };
+
+  const handleBackToMain = () => {
+    setCurrentPage('main');
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -561,6 +571,11 @@ function App() {
     { number: "1000+", label: t.stats.clients, icon: Target }
   ];
 
+  // Если выбрана страница мёда, показываем её
+  if (currentPage === 'honey') {
+    return <HoneyPage onBack={handleBackToMain} />;
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -568,7 +583,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <Building2 className="h-8 w-8 text-blue-900 transition-transform duration-300 hover:scale-110" />
+              <img 
+                src="/logo.png" 
+                alt="Anteyko Logo" 
+                className="h-8 w-8 transition-transform duration-300 hover:scale-110"
+              />
               <div>
                 <span className="text-2xl font-bold text-gray-900">ANTEYKO</span>
                 <span className="text-sm text-gray-600 ml-2">GROUP</span>
@@ -776,6 +795,12 @@ function App() {
                   className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group cursor-pointer relative"
                   onMouseEnter={() => setHoveredCard(index + 100)}
                   onMouseLeave={() => setHoveredCard(null)}
+                  onClick={() => {
+                    // Если это карточка с мёдом (последняя), переходим на страницу мёда
+                    if (index === businessAreas.length - 1) {
+                      handleHoneyClick();
+                    }
+                  }}
                 >
                   <div className="relative h-48 overflow-hidden">
                     <img 
@@ -890,7 +915,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <Building2 className="h-8 w-8 text-blue-400 transition-transform duration-300 hover:scale-110" />
+              <img 
+                src="/logo.png" 
+                alt="Anteyko Logo" 
+                className="h-8 w-8 transition-transform duration-300 hover:scale-110"
+              />
               <div>
                 <span className="text-2xl font-bold">ANTEYKO GROUP</span>
               </div>
