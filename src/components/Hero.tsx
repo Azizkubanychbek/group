@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
-        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20">
+        <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-32">
           <div className="space-y-8">
             <div className="space-y-4">
               <div className="flex items-center space-x-2 text-amber-400">

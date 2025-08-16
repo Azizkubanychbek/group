@@ -37,13 +37,13 @@ const Header: React.FC<HeaderProps> = ({ onBack }) => {
             )}
             <div className="relative">
               <img 
-                src="/logo.png" 
+                src="/logo_honey.png" 
                 alt="Anteyko Logo" 
                 className="w-8 h-8"
               />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-amber-500 to-yellow-600 bg-clip-text text-transparent">
-              Anteyko
+              Anteyko Honey
             </span>
           </div>
 

@@ -112,7 +112,8 @@ const translations = {
       title: 'Готовы к сотрудничеству?',
       subtitle: 'Свяжитесь с нами, чтобы обсудить возможности партнерства или узнать больше о наших услугах',
       contact: 'Связаться с нами',
-      download: 'Скачать презентацию'
+      download: 'Скачать презентацию',
+      message: 'Оставьте сообщение ниже, и мы свяжемся с вами в ближайшее время.'
     },
     contact: {
       title: 'Контактная информация',
@@ -206,7 +207,8 @@ const translations = {
       title: 'Ready to Collaborate?',
       subtitle: 'Contact us to discuss partnership opportunities or learn more about our services',
       contact: 'Contact Us',
-      download: 'Download Presentation'
+      download: 'Download Presentation',
+      message: 'Leave a message below and we will contact you soon.'
     },
     contact: {
       title: 'Contact Information',
@@ -300,7 +302,8 @@ const translations = {
       title: '准备合作了吗？',
       subtitle: '联系我们讨论合作机会或了解更多关于我们的服务',
       contact: '联系我们',
-      download: '下载演示文稿'
+      download: '下载演示文稿',
+      message: '在下方留言，我们会尽快与您联系。'
     },
     contact: {
       title: '联系信息',
@@ -581,14 +584,14 @@ function App() {
       {/* Navigation */}
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrollY > 50 ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center space-x-3">
-              <Building2 className="h-8 w-8 text-blue-900 transition-transform duration-300 hover:scale-110" />
-              <div>
-                <span className="text-2xl font-bold text-gray-900">ANTEYKO</span>
-                <span className="text-sm text-gray-600 ml-2">GROUP</span>
-              </div>
-            </div>
+                  <div className="flex justify-between items-center h-16">
+          <div className="flex items-center space-x-3 md:justify-start justify-center flex-1">
+            <img 
+              src="/anteyko-group.png" 
+              alt="ANTEYKO GROUP Logo" 
+              className="h-12 w-auto transition-transform duration-300 hover:scale-110"
+            />
+          </div>
             
             <div className="hidden md:flex items-center space-x-8">
               {[
@@ -646,13 +649,19 @@ function App() {
                 {t.hero.description}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-900 text-white px-8 py-4 rounded-md font-semibold hover:bg-blue-800 transition-all duration-200 flex items-center justify-center hover:scale-105 hover:shadow-lg group">
+                <a 
+                  href="#contact"
+                  className="bg-blue-900 text-white px-8 py-4 rounded-md font-semibold hover:bg-blue-800 transition-all duration-200 flex items-center justify-center hover:scale-105 hover:shadow-lg group"
+                >
                   <Play className="mr-2 h-5 w-5" />
                   {t.hero.learnMore}
-                </button>
-                <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-md font-semibold hover:border-gray-400 transition-all duration-200 hover:scale-105 hover:shadow-md">
+                </a>
+                <a 
+                  href="#business"
+                  className="border border-gray-300 text-gray-700 px-8 py-4 rounded-md font-semibold hover:border-gray-400 transition-all duration-200 hover:scale-105 hover:shadow-md"
+                >
                   {t.hero.ourProjects}
-                </button>
+                </a>
               </div>
             </div>
             <div className="relative animate-fade-in-up delay-200">
@@ -836,10 +845,22 @@ function App() {
                       ))}
                     </div>
                     
-                    <button className="text-blue-900 font-semibold hover:text-blue-700 transition-all duration-200 flex items-center group-hover:translate-x-2">
-                      {t.business.learnMore}
-                      <ChevronRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
-                    </button>
+                    {index === 0 || index === 1 || index === 2 ? (
+                      <a 
+                        href="https://www.anteyko-labs.com/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-blue-900 font-semibold hover:text-blue-700 transition-all duration-200 flex items-center group-hover:translate-x-2"
+                      >
+                        {t.business.learnMore}
+                        <ChevronRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+                      </a>
+                    ) : (
+                      <button className="text-blue-900 font-semibold hover:text-blue-700 transition-all duration-200 flex items-center group-hover:translate-x-2">
+                        {t.business.learnMore}
+                        <ChevronRight className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
+                      </button>
+                    )}
                   </div>
                 </div>
               );
@@ -850,22 +871,16 @@ function App() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">
             {t.cta.title}
           </h2>
           <p className="text-xl text-gray-600 mb-8">
             {t.cta.subtitle}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-900 text-white px-8 py-4 rounded-md font-semibold hover:bg-blue-800 transition-all duration-200 flex items-center justify-center hover:scale-105 hover:shadow-lg group">
-              <Mail className="mr-2 h-5 w-5" />
-              {t.cta.contact}
-            </button>
-            <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-md font-semibold hover:border-gray-400 transition-all duration-200 hover:scale-105 hover:shadow-md">
-              {t.cta.download}
-            </button>
-          </div>
+          <p className="text-lg text-gray-600">
+            {t.cta.message}
+          </p>
         </div>
       </section>
 
@@ -911,10 +926,11 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <Building2 className="h-8 w-8 text-blue-400 transition-transform duration-300 hover:scale-110" />
-              <div>
-                <span className="text-2xl font-bold">ANTEYKO GROUP</span>
-              </div>
+              <img 
+                src="/white-group.png" 
+                alt="ANTEYKO GROUP Logo" 
+                className="h-10 w-auto transition-transform duration-300 hover:scale-110"
+              />
             </div>
             
             <div className="text-gray-400 text-sm">

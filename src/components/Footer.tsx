@@ -9,12 +9,12 @@ const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <img 
-                src="/logo.png" 
+                src="/logo_honey.png" 
                 alt="Anteyko Logo" 
                 className="w-8 h-8"
               />
               <span className="text-xl font-bold bg-gradient-to-r from-amber-400 to-yellow-300 bg-clip-text text-transparent">
-                Anteyko
+                Anteyko Honey
               </span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
