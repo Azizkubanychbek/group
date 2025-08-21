@@ -28,10 +28,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-amber-400">Продукция</h3>
             <ul className="space-y-2 text-gray-300 text-sm">
-              <li><a href="#" className="hover:text-amber-400 transition-colors">Цветочный алгоритм</a></li>
-              <li><a href="#" className="hover:text-amber-400 transition-colors">Липовый стек</a></li>
-              <li><a href="#" className="hover:text-amber-400 transition-colors">Гречишный код</a></li>
-              <li><a href="#" className="hover:text-amber-400 transition-colors">Акациевый framework</a></li>
+              <li><a href="#" className="hover:text-amber-400 transition-colors">Цветочный мёд</a></li>
+              <li><a href="#" className="hover:text-amber-400 transition-colors">Липовый мёд</a></li>
+              <li><a href="#" className="hover:text-amber-400 transition-colors">Гречишный мёд</a></li>
+              <li><a href="#" className="hover:text-amber-400 transition-colors">Акациевый мёд</a></li>
               <li><a href="#" className="hover:text-amber-400 transition-colors">Все сорта</a></li>
             </ul>
           </div>

@@ -17,35 +17,35 @@ const Products: React.FC = () => {
   const products: Product[] = [
     {
       id: 1,
-      name: "Цветочный алгоритм",
-      description: "Наш флагманский продукт - результат машинного обучения для оптимального сбора нектара с полевых цветов.",
+      name: "Цветочный мёд",
+      description: "Наш флагманский продукт - натуральный мёд, собранный с разнообразных полевых цветов.",
       image: "https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=800",
       price: "1,200 сом",
-      features: ["AI-оптимизированный сбор", "100% полевые цветы", "Прозрачность происхождения"],
+      features: ["100% полевые цветы", "Натуральный вкус", "Прозрачность происхождения"],
       badge: "Хит продаж"
     },
     {
       id: 2,
-      name: "Липовый стек",
-      description: "Премиальный мёд из липы с применением технологий точного земледелия и IoT мониторинга.",
+      name: "Липовый мёд",
+      description: "Премиальный мёд из липы, собранный в экологически чистых липовых рощах.",
       image: "https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&w=800",
       price: "1,800 сом",
-      features: ["IoT мониторинг ульев", "Премиум качество", "Ограниченная серия"],
+      features: ["Премиум качество", "Натуральный липовый аромат", "Ограниченная серия"],
       badge: "Premium"
     },
     {
       id: 3,
-      name: "Гречишный код",
-      description: "Тёмный мёд с насыщенным вкусом, собранный с помощью smart-технологий анализа цветения.",
-      image: "https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      name: "Гречишный мёд",
+      description: "Тёмный мёд с насыщенным вкусом, богатый микроэлементами и витаминами.",
+      image: "https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=800",
       price: "1,400 сом",
-      features: ["Богат микроэлементами", "Smart-анализ цветения", "Высокая питательность"]
+      features: ["Богат микроэлементами", "Насыщенный вкус", "Высокая питательность"]
     },
     {
       id: 4,
-      name: "Акациевый framework",
-      description: "Светлый мёд деликатного вкуса, созданный с использованием передовых методов пчеловодства.",
-      image: "https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      name: "Акациевый мёд",
+      description: "Светлый мёд деликатного вкуса, собранный с акациевых деревьев в экологически чистых районах.",
+      image: "https://images.pexels.com/photos/1638280/pexels-photo-1638280.jpeg?auto=compress&cs=tinysrgb&w=800",
       price: "1,600 сом",
       features: ["Деликатный вкус", "Долго не кристаллизуется", "Гипоаллергенный"]
     }
